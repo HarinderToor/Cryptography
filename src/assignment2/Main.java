@@ -85,7 +85,7 @@ public class Main {
       userDetails.put(user, password);
       System.out.println("User created!");
     } else {
-      System.out.println("Username already taken!");
+      System.out.println("Error: Username already taken! Please Try Again.");
     }
   }
 
@@ -94,7 +94,7 @@ public class Main {
     System.out.println("Please enter your login ID: ");
     user = scan.nextLine();
 
-    System.out.println("Please enter your login ID: ");
+    System.out.println("Please enter your password: ");
     password = scan.nextLine();
 
     Object existingUser = userDetails.get(user);
