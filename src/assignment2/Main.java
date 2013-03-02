@@ -125,7 +125,7 @@ public class Main {
 
     startTimer();
 
-    // Start the attempt with nothing but witha all available characters
+    // Start the attempt with an empty string but with all available characters
     String hashAttempt = "";
     String attempt = bruteForce.toString();
 
@@ -178,7 +178,7 @@ public class Main {
     if (timeElapsed == 0) {
       System.out.println("Time taken to solve was: " + timeElapsed + " milliseconds.");
     } else {
-      System.out.println("Time taken to solve was: " + timeElapsed + " seconds.");
+      System.out.println("Time taken to solve was: " + timeElapsed/1000 + " seconds.");
     }
   }
 
