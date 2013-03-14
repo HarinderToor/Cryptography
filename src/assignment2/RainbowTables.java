@@ -1,18 +1,14 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Rainbow Tables Class
+ * Cryptography Assignment 2
+ * @author Harinder
  */
 package assignment2;
 
-/**
- *
- * @author Harinder
- */
 public class RainbowTables {
 
     int Hash;
     String Password;
-    
     private static int min = Integer.parseInt("100", 36);
     private static int range = Integer.parseInt("zzz", 36) - min;
 
