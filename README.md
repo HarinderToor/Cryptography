@@ -3,4 +3,4 @@ Cryptography
 
 Simple SHA-1 Brute force and Rainbow table implementation in Java.
 
-Used for an 3rd year assignment.
+Used for a 3rd year assignment in a University Cryptography module.
