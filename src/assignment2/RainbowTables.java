@@ -1,10 +1,13 @@
 /*
  * Rainbow Tables Class
  * Cryptography Assignment 2
- * @author Harinder
  */
 package assignment2;
 
+/**
+ *
+ * @author Harinder
+ */
 public class RainbowTables {
 
 //    int Hash;

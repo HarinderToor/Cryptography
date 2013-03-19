@@ -1,37 +1,43 @@
 /*
  * Brute Force Class
  * Cryptography Assignment 2
- * @author Harinder
  */
 package assignment2;
 
 import java.util.Arrays;
 
+/**
+ *
+ * @author Harinder
+ */
 public class BruteForce {
 
-    private char[] charSet;
-    private char[] charGuess;
+    // Two arrays; for character set and potential guesses
+    private char[] charSetArray;
+    private char[] charGuessArray;
 
+    // Create and fill charsArray on Object creation
     public BruteForce(char[] characterSet, int guessLength) {
-        charSet = characterSet;
-        charGuess = new char[guessLength];
-        Arrays.fill(charGuess, charSet[0]);
+        charSetArray = characterSet;
+        charGuessArray = new char[guessLength];
+        Arrays.fill(charGuessArray, charSetArray[0]);
     }
 
+    // Increment each min value and store it in the charsGuessArray
     public void Guessing() {
-        int index = charGuess.length - 1;
+        int index = charGuessArray.length - 1;
         while (index >= 0) {
-            if (charGuess[index] == charSet[charSet.length - 1]) {
+            if (charGuessArray[index] == charSetArray[charSetArray.length - 1]) {
                 if (index == 0) {
-                    charGuess = new char[charGuess.length + 1];
-                    Arrays.fill(charGuess, charSet[0]);
+                    charGuessArray = new char[charGuessArray.length + 1];
+                    Arrays.fill(charGuessArray, charSetArray[0]);
                     break;
                 } else {
-                    charGuess[index] = charSet[0];
+                    charGuessArray[index] = charSetArray[0];
                     index--;
                 }
             } else {
-                charGuess[index] = charSet[Arrays.binarySearch(charSet, charGuess[index]) + 1];
+                charGuessArray[index] = charSetArray[Arrays.binarySearch(charSetArray, charGuessArray[index]) + 1];
                 break;
             }
         }
@@ -39,6 +45,6 @@ public class BruteForce {
 
     @Override
     public String toString() {
-        return String.valueOf(charGuess);
+        return String.valueOf(charGuessArray);
     }
 }

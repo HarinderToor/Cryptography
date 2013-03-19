@@ -1,47 +1,53 @@
 /*
- * Brute Force Alternative Class
+ * Alternative Brute Force Class
  * Cryptography Assignment 2
- * @author Harinder
  */
 package assignment2;
 
 import java.util.Arrays;
 
+/**
+ *
+ * @author Harinder
+ */
 public class BruteForceAlt {
 
     final int startChar;
     final int endChar;
     final int stringLength;
-    private final int[] chars;
+    private final int[] charsArray;
 
+    // Create and fill charsArray on Object creation
     public BruteForceAlt(char min, char max, int len) {
         this.startChar = min;
         this.endChar = max;
         this.stringLength = len;
 
-        chars = new int[stringLength + 1];
-        Arrays.fill(chars, 1, chars.length, min);
+        charsArray = new int[stringLength + 1];
+        Arrays.fill(charsArray, 1, charsArray.length, min);
     }
 
+    // Increment each min value to store it in the charsArray
     private void increment() {
-        for (int i = chars.length - 1; i >= 0; i--) {
-            if (chars[i] < endChar) {
-                chars[i]++;
+        for (int i = charsArray.length - 1; i >= 0; i--) {
+            if (charsArray[i] < endChar) {
+                charsArray[i]++;
                 return;
             }
-            chars[i] = startChar;
+            charsArray[i] = startChar;
         }
     }
 
+    // Print out all charsArray values
     private void print() {
-        for (int i = 1; i < chars.length; i++) {
-            System.out.print((char) chars[i]);
+        for (int i = 1; i < charsArray.length; i++) {
+            System.out.print((char) charsArray[i]);
         }
         System.out.println();
     }
 
     public void run() {
-        while (chars[0] == 0) {
+        while (charsArray[0] == 0) {
             print();
             increment();
         }
