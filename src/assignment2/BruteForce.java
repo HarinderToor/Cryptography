@@ -1,5 +1,5 @@
 /*
- * Brute Force Class
+ * BruteForce Class
  * Cryptography Assignment 2
  */
 package assignment2;
